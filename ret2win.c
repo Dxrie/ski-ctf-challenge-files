@@ -3,23 +3,7 @@
 #include <string.h>
 
 void win() {
-    unsigned char hex_values[] = {
-        0x46, 0x5E, 0x5C, 0x56, 0x41, 0x53, 0x6E,
-        0x65, 0x67, 0x7A, 0x77, 0x74, 0x77, 0x79, 0x6C, 0x4A,
-        0x6C, 0x7A, 0x60, 0x67, 0x4A,
-        0x73, 0x7C, 0x67, 0x66, 0x61, 0x4A,
-        0x77, 0x60, 0x73, 0x73, 0x70, 0x67, 0x4A,
-        0x7A, 0x63, 0x70, 0x67, 0x73, 0x79, 0x7A, 0x62, 0x68
-    };
-
-    int length = sizeof(hex_values) / sizeof(hex_values[0]);
-
-    for (int i = 0; i < length; i++) {
-        unsigned char result = hex_values[i] ^ 0x15;
-        printf("%c", result);
-    }
-    printf("\n");
-    exit(0);
+    system("cat flag.txt");
 }
 
 void vulnerable() {
@@ -31,6 +15,6 @@ void vulnerable() {
 int main() {
     setbuf(stdout, NULL);
     vulnerable();
-    printf("Program finished.\n");
+    printf(Program finished.\n");
     return 0;
 }
