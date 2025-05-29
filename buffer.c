@@ -14,6 +14,9 @@ void vulnerable() {
 
 int main() {
     setbuf(stdout, NULL);
+    setbuf(stdin, NULL);
+    setbuf(stderr, NULL);
+    
     vulnerable();
     printf("Program finished.\n");
     return 0;
